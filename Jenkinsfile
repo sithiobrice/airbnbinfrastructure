@@ -39,7 +39,7 @@ pipeline {
         stage('checkov scan') {
             steps {
                 sh """
-                sudo pip3 install checkov -y
+                sudo pip3 install -y checkov
                 checkov -d . --skip-check CKV_AWS_79
                 """
             }
