@@ -11,3 +11,7 @@ resource "aws_instance" "web" {
     Name = "airbnb-web-server"
   }
 }
+<<<<<<< HEAD
+=======
+#create ec2
+>>>>>>> 4b5da15 (chekov scan fixed)
