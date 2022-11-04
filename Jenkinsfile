@@ -18,16 +18,16 @@ pipeline {
                 sh 'terraform --version'
             }
         }
-        stage('Terraform validate') {
-            steps {
-                echo 'Code syntax checking...'
-                sh 'terraform validate'
-            }
-        }
         stage('Terraform init') {
             steps {
                 echo 'Initiliazing terraform project...'
                 sh 'terraform init'
+            }
+        }
+        stage('Terraform validate') {
+            steps {
+                echo 'Code syntax checking...'
+                sh 'terraform validate'
             }
         }
         stage('Terraform plan') {
