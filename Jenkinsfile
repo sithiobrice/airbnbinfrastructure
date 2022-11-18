@@ -36,14 +36,14 @@ pipeline {
                 sh 'terraform plan'
             }
         }
-        stage('checkov scan') {
-            steps {
-                sh """
-                sudo pip3 install checkov
-                checkov -d . --skip-check CKV_AWS_79
-                """
-            }
-        }
+        // stage('checkov scan') {
+        //     steps {
+        //         sh """
+        //         sudo pip3 install checkov
+        //         checkov -d . --skip-check CKV_AWS_79
+        //         """
+        //     }
+        // }
         stage('Manual approval') {
             steps {
                 input 'Approval required for deployment'
